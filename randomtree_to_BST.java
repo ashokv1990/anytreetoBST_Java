@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class anytreetobstree {
 
 	
+    // Method to reverse a Linkedlist
 	public static ll makerevconn(ll head)
 	{
 		ll curr = head.next , prev = head;
@@ -43,7 +44,7 @@ public class anytreetobstree {
 			}
 			
 		
-		//The main function
+		//Merge sort two Linked Lists
 		public static ll merge_sort(ll head) {
 		    if(head == null || head.next == null) { return head; }
 		    ll middle = getMiddle(head);      //get the middle of the list
@@ -53,6 +54,7 @@ public class anytreetobstree {
 		}
 		
 		
+        //append to the double linked list
 		public static void append(ll node1, ll node2)
 		{
 			node1.next = node2;
@@ -76,6 +78,7 @@ public class anytreetobstree {
 		
 		}
 		
+       //convert a double linkedlist to a tree
 		public static treenode lltotree(ll head)
 		{
 		
@@ -85,6 +88,7 @@ public class anytreetobstree {
 			return root;
 		}
 		
+    // count nodes in a linked list
 		public static int countnodes(ll head)
 		{
 			int count = 0;
@@ -97,9 +101,14 @@ public class anytreetobstree {
 			return count;
 		}
 		
+     // convert a tree to double linked list
 		public static treenode ll_treenode(llwrapper wrap , int n)
-		{
-			/*
+
+    
+    {
+        //alternative implementation
+        
+/*
  struct node *ConvertTreefromDll(struct node *head)
 {
 	If (head==NULL || head->next == NULL) return head;
@@ -119,9 +128,7 @@ public class anytreetobstree {
 	return temp;
 }
  
-			 */
 	
-			/*		Paste your code here (You may delete these lines if not writing code)
 struct node *ConvertTreefromDll(struct node *head) 
 {     
 If (head==NULL || head->next == NULL) 
@@ -157,6 +164,8 @@ return temp;
 			
 			
 		}
+    
+    //convert tree to double linked list
 		public static ll tree_ll(treenode root)
 		{
 			
@@ -167,6 +176,7 @@ return temp;
 			
 		}
 		
+    //convert tree to double linked list
 		public static ll treetoll(treenode root)
 		{
 			
@@ -213,6 +223,8 @@ return temp;
 			
 			return prev==null?curr:prev;
 		}
+    
+    // level order traversal of a tree
 		
 		public static void getlevels(ArrayList<ArrayList<treenode>> lists , int index,treenode root)
 		{
@@ -256,6 +268,7 @@ return temp;
 		}
 		public static void main(String args[])
 		{
+            //commented test cases
 		/*
 	    ll temp = new ll(55) , head = temp;
 		for(int i = 12 ; i >=0 ; i--)
